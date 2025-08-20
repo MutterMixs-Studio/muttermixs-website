@@ -1,28 +1,28 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
-import AnimatedBackground from './components/AnimatedBackground.jsx'
-import Header from './components/Header.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "./routes/routes";
 
 function App() {
-
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   return (
-    <>
-      <div className="min-h-screen bg-black text-white overflow-hidden">
-        <AnimatedBackground mousePosition={mousePosition} />
-        <Header />
-
-      </div>
-
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        {routes.map((route, idx) => (
+          <Route key={idx} path={route.path} element={route.element}>
+            {/* 👇 If a route has children, render them too */}
+            {route.children &&
+              route.children.map((child, cIdx) => (
+                <Route
+                  key={cIdx}
+                  index={child.index}
+                  path={child.path}
+                  element={child.element}
+                />
+              ))}
+          </Route>
+        ))}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
