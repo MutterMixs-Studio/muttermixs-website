@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import TextHeader from "../ui/TextHeader";
 import Text from "../ui/Text";
+import Button from "../ui/Button";
 
 const HeroSection = () => {
     const [currentWord, setCurrentWord] = useState(0);
@@ -43,17 +44,17 @@ const HeroSection = () => {
 
                 {/* CTA buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
-                    <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+                    <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+                        About Our Studio
+                    </button>
+                    <Button className="px-8 py-4 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 w-full sm:w-auto" onClick={() => console.log('Explore Our Games clicked')}>
                         <span className="flex items-center justify-center">
                             Explore Our Games
                             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" />
                             </svg>
                         </span>
-                    </button>
-                    <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-105 w-full sm:w-auto">
-                        About Our Studio
-                    </button>
+                    </Button>
                 </div>
             </div>
         </section>
