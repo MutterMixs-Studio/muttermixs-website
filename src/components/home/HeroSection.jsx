@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import TextHeader from "../ui/TextHeader";
+import Text from "../ui/Text";
 
 const HeroSection = () => {
     const [currentWord, setCurrentWord] = useState(0);
@@ -17,9 +19,9 @@ const HeroSection = () => {
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Studio logo/name */}
                 <div className="mb-8 sm:mb-12">
-                    <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-4 tracking-tight">
+                    <TextHeader className="text-5xl sm:text-6xl lg:text-8xl font-bold bg-clip-text text-transparent mb-4 tracking-tight">
                         MutterMixs
-                    </h1>
+                    </TextHeader>
                     <div className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light tracking-wider">
                         STUDIO
                     </div>
@@ -33,10 +35,10 @@ const HeroSection = () => {
                             {words[currentWord]}
                         </span>
                     </div>
-                    <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    <Text className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
                         We push the boundaries of interactive entertainment, creating immersive worlds
                         that captivate players and redefine gaming experiences.
-                    </p>
+                    </Text>
                 </div>
 
                 {/* CTA buttons */}
