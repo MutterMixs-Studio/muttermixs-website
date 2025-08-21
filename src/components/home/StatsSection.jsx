@@ -15,7 +15,7 @@ const StatsSection = () => {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                     {stats.map((stat, index) => (
                         <div key={index} className="text-center group">
-                            <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                            <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#3c6e71] to-[#284b63] hover:from-[#6ee7b7] hover:to-[#3b82f6] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
                                 {stat.number}
                             </div>
                             <div className="text-gray-400 text-sm sm:text-base lg:text-lg font-medium">

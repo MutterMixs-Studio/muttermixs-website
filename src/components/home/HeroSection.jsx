@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import TextHeader from "../ui/TextHeader";
 import Text from "../ui/Text";
-import Button from "../ui/Button";
+import PrimaryButton from "../ui/PrimaryButton";
+import SecondaryButton from "../ui/SecondaryButton";
 
 const HeroSection = () => {
     const [currentWord, setCurrentWord] = useState(0);
@@ -20,7 +21,7 @@ const HeroSection = () => {
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Studio logo/name */}
                 <div className="mb-8 sm:mb-12">
-                    <TextHeader className="text-5xl sm:text-6xl lg:text-8xl font-bold bg-clip-text text-transparent mb-4 tracking-tight">
+                    <TextHeader className="text-5xl sm:text-6xl lg:text-8xl font-bold bg-clip-text text-transparent mb-4 tracking-wider">
                         MutterMixs
                     </TextHeader>
                     <div className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light tracking-wider">
@@ -30,31 +31,32 @@ const HeroSection = () => {
 
                 {/* Animated tagline */}
                 <div className="mb-12 sm:mb-16">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 font-medium">
-                        Crafting Games with{' '}
-                        <span className="inline-block min-w-[200px] text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text font-bold">
-                            {words[currentWord]}
-                        </span>
-                    </div>
                     <Text className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                        We push the boundaries of interactive entertainment, creating immersive worlds
-                        that captivate players and redefine gaming experiences.
+                        Crafting games, one line of code at a time.<br />
+                        Built with pure passion, designed with care.<br />
+                        A solo journey into game development.
                     </Text>
                 </div>
 
                 {/* CTA buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
-                    <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+                    <SecondaryButton
+                        className="px-8 py-4 hover:shadow-2xl hover:shadow-[#173040] transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                        to="/about"
+                    >
                         About Our Studio
-                    </button>
-                    <Button className="px-8 py-4 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 w-full sm:w-auto" onClick={() => console.log('Explore Our Games clicked')}>
+                    </SecondaryButton>
+                    <PrimaryButton
+                        className="px-8 py-4 hover:shadow-2xl hover:shadow-[#274c4e] transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                        to="/games"
+                    >
                         <span className="flex items-center justify-center">
                             Explore Our Games
                             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" />
                             </svg>
                         </span>
-                    </Button>
+                    </PrimaryButton>
                 </div>
             </div>
         </section>
