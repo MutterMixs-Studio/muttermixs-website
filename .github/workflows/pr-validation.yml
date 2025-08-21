@@ -44,7 +44,7 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
-          files: frontend/junit.xml
+          files: junit.xml
           check_name: "Vitest Test Results"
           comment_title: "📊 Test Results"
           comment_mode: always
