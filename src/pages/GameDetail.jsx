@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import staticData from '../static/index.js';
 import GameDetailWrapper from "../components/gamedetails/GameDetailWrapper.jsx";
+import TextHolder from "../components/ui/TextHolder.jsx";
 
 const { featuredGames } = staticData;
 
@@ -9,8 +10,8 @@ export default function GameDetail() {
     const game = featuredGames.find((g) => g.slug === slug);
 
     return (
-        <div className="max-w-2xl mx-auto text-center space-y-6">
+        <TextHolder className="">
             <GameDetailWrapper id={slug} />
-        </div>
+        </TextHolder>
     );
 }
