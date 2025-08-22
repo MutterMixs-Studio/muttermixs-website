@@ -8,12 +8,12 @@ const { featuredGames } = staticData;
 
 export default function Home() {
     return (
-        <>
-            <HeroSection />
+        <div>
 
+            <HeroSection />
             <FeaturedGamesCarousel featuredGames={featuredGames} className="" />
             <StatsSection />
 
-        </>
+        </div>
     );
 }

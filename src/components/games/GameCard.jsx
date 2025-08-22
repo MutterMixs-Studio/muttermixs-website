@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../ui/Button";
 
 const GameCard = ({ game, isHovered, onHover, onLeave, className = "" }) => {
     const getStatusColor = (status) => {
@@ -79,13 +80,18 @@ const GameCard = ({ game, isHovered, onHover, onLeave, className = "" }) => {
 
                 {/* Store Button */}
                 <div className="pt-2">
-                    <button className={`
-                        w-full py-2 px-4 rounded font-semibold text-white text-sm
-                        transition-all duration-200 transform active:scale-95
-                        ${getStoreColor(game.store)}
-                    `}>
-                        {game.status === "Out Now" ? `Available on ${game.store}` : `Wishlist on ${game.store}`}
-                    </button>
+                    <Button
+                        className={`
+                                    w-full block text-center py-2 px-4 rounded font-semibold text-white text-sm
+                                    transition-all duration-200 transform active:scale-95
+                                    ${getStoreColor(game.store)}
+                                    `}
+                        to={`/games/${game.slug}`}
+                    >
+                        {game.status === "Out Now"
+                            ? `Available on ${game.store}`
+                            : `Wishlist on ${game.store}`}
+                    </Button>
                 </div>
             </div>
 
