@@ -12,7 +12,6 @@ export default function Navbar() {
         { path: "/games", label: "Games" },
         { path: "/about", label: "About" },
         { path: "/news", label: "News" },
-        { path: "/contact", label: "Contact" },
     ];
 
     return (
@@ -25,8 +24,8 @@ export default function Navbar() {
                             to="/"
                             className="flex items-center space-x-2"
                         >
-                            <div className="w-full h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg px-4">
-                                <span className="text-white font-bold text-lg">MutterMixs Studio</span>
+                            <div className="w-full h-10 bg-gradient-to-br from-[#3c6e71] to-[#284b63] hover:from-[#2a4b52] hover:to-[#1f3b4d] rounded-lg flex items-center justify-center shadow-lg px-4">
+                                <span className="text-[#d9d9d9] font-bold text-lg">MutterMixs Studio</span>
                             </div>
 
                         </Link>
@@ -40,14 +39,12 @@ export default function Navbar() {
                                     key={link.path}
                                     to={link.path}
                                     className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 ${isActive(link.path)
-                                        ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
+                                        ? "bg-[#284b63] text-white shadow-lg shadow-[#1f3b4d]"
                                         : "text-gray-300 hover:bg-gray-700/50 hover:text-white"
                                         }`}
                                 >
                                     {link.label}
-                                    {isActive(link.path) && (
-                                        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-indigo-400 rounded-full"></div>
-                                    )}
+
                                 </Link>
                             ))}
                         </div>
@@ -57,7 +54,7 @@ export default function Navbar() {
                     <div className="hidden md:block">
                         <Link
                             to="/games"
-                            className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                            className="bg-gradient-to-r from-[#3c6e71] to-[#284b63] hover:from-[#2a4b52] hover:to-[#1f3b4d] text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             Play Now
                         </Link>
@@ -92,7 +89,7 @@ export default function Navbar() {
                                 to={link.path}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${isActive(link.path)
-                                    ? "bg-indigo-600 text-white"
+                                    ? "bg-[#3c6e71] text-white"
                                     : "text-gray-300 hover:bg-gray-700 hover:text-white"
                                     }`}
                             >
@@ -102,7 +99,7 @@ export default function Navbar() {
                         <Link
                             to="/games"
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-3 py-2 mt-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center rounded-md font-medium"
+                            className="block px-3 py-2 mt-2 bg-gradient-to-r from-[#3c6e71] to-[#284b63] text-white text-center rounded-md font-medium"
                         >
                             Play Now
                         </Link>

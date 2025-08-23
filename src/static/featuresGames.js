@@ -2,7 +2,7 @@ const featuredGames = [
     {
         slug: "blockline64",
         title: "Blockline 64",
-        description: "A block-based puzzle game with skins and a public leaderboard.",
+        description: "A block-based puzzle game with skins and a public leaderboard where you can compete against others.",
         image: "/src/assets/images/blockline64_banner.png",
         store: "Google Play",
         status: "Out Now",
@@ -12,7 +12,7 @@ const featuredGames = [
     {
         slug: "escape-protocol",
         title: "Escape Protocol",
-        description: "A social deduction game where players must escape a facility while avoiding the killers.",
+        description: "A social deduction game where players must escape the hostile environment while avoiding the killers.",
         image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800&h=500&fit=crop",
         store: "Steam",
         status: "In Development",
