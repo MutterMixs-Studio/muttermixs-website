@@ -12,7 +12,6 @@ export default function Navbar() {
         { path: "/games", label: "Games" },
         { path: "/about", label: "About" },
         { path: "/news", label: "News" },
-        { path: "/contact", label: "Contact" },
     ];
 
     return (

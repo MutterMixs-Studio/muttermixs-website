@@ -15,6 +15,11 @@ const Blockline64 = () => {
             <TextHeader className="text-4xl font-bold py-4">
                 {game.title}
             </TextHeader>
+            <a href="https://play.google.com/store/apps/details?id=com.muttermixs.blockline64" target="_blank" rel="noopener noreferrer">
+                <img src="../src/assets/images/blockline64/download_google_play.png" alt="Google Store"
+                    className="w-48 h-auto"
+                />
+            </a>
             <ImageText
                 image="../src/assets/images/blockline64/blockline64_phone_angle.png"
                 imagePosition="right"
@@ -171,13 +176,13 @@ const Blockline64 = () => {
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12 pb-8">
                 <a
-                    href="/projects/blockline64/privacy-policy.html"
+                    href="/blockline64/privacy-policy.html"
                     className="px-6 py-2 rounded-2xl bg-gray-800 text-white hover:bg-gray-700 transition"
                 >
                     Privacy Policy
                 </a>
                 <a
-                    href="/projects/blockline64/terms-of-service.html"
+                    href="/blockline64/terms-of-service.html"
                     className="px-6 py-2 rounded-2xl bg-gray-800 text-white hover:bg-gray-700 transition"
                 >
                     Terms of Service
