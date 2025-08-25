@@ -4,7 +4,7 @@ import routes from "./routes/routes";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/muttermixs-website">
       <Routes>
         {routes.map((route, idx) => (
           <Route key={idx} path={route.path} element={route.element}>
