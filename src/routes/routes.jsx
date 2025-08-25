@@ -4,6 +4,7 @@ import GameDetail from "../pages/GameDetail";
 import About from "../pages/About";
 import Games from "../pages/Games";
 import News from "../pages/News";
+import Support from "../pages/Support";
 import { Navigate } from "react-router-dom";
 
 const routes = [
@@ -17,6 +18,7 @@ const routes = [
             //{ path: "news/:id", element: <NewsDetail /> },
             { path: "about", element: <About /> },
             { path: "games", element: <Games /> },
+            { path: "support", element: <Support /> },
             // Redirection
             { path: "blockline64", element: <Navigate to="/games/blockline64" replace /> },
             { path: "escape-protocol", element: <Navigate to="/games/escape-protocol" replace /> },

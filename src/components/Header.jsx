@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 
@@ -12,9 +13,13 @@ export default function Header() {
                             Welcome to MutterMixs Studio
                         </div>
                         <div className="flex items-center space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
+                            <Link
+                                key="support"
+                                to="/support"
+                                className="text-gray-400 hover:text-indigo-400 transition-colors"
+                            >
                                 Support
-                            </a>
+                            </Link>
                             <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
                                 FAQ
                             </a>

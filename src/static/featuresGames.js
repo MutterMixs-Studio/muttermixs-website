@@ -1,9 +1,11 @@
+import imageGames from "./imageGames";
+
 const featuredGames = [
     {
         slug: "blockline64",
         title: "Blockline 64",
         description: "A block-based puzzle game with skins and a public leaderboard where you can compete against others.",
-        image: "/src/assets/images/blockline64_banner.png",
+        image: imageGames.blockline64,
         store: "Google Play",
         status: "Out Now",
         genre: ["Hyper Casual", "Puzzle", "Arcade"],
