@@ -4,6 +4,7 @@ import TextHolder from "../ui/TextHolder.jsx";
 import TextHeader from "../ui/TextHeader.jsx";
 import ImageText from "../ui/ImageText.jsx";
 import Text from "../ui/Text.jsx";
+import googlePlayImg from "../../assets/images/blockline64/download_google_play.png";
 
 const { featuredGames } = staticData;
 
@@ -16,7 +17,7 @@ const Blockline64 = () => {
                 {game.title}
             </TextHeader>
             <a href="https://play.google.com/store/apps/details?id=com.muttermixs.blockline64" target="_blank" rel="noopener noreferrer">
-                <img src="../src/assets/images/blockline64/download_google_play.png" alt="Google Store"
+                <img src={googlePlayImg} alt="Google Store"
                     className="w-48 h-auto"
                 />
             </a>
