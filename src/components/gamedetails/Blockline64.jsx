@@ -5,6 +5,10 @@ import TextHeader from "../ui/TextHeader.jsx";
 import ImageText from "../ui/ImageText.jsx";
 import Text from "../ui/Text.jsx";
 import googlePlayImg from "../../assets/images/blockline64/download_google_play.png";
+import phoneAngle from "../../assets/images/blockline64/blockline64_phone_angle.png";
+import leaderboardFeature from "../../assets/images/blockline64/leaderboard_feature.png";
+import skinFeature from "../../assets/images/blockline64/skin_feature.png";
+import economyFeature from "../../assets/images/blockline64/economy_feature.png";
 
 const { featuredGames } = staticData;
 
@@ -22,7 +26,7 @@ const Blockline64 = () => {
                 />
             </a>
             <ImageText
-                image="../src/assets/images/blockline64/blockline64_phone_angle.png"
+                image={phoneAngle}
                 imagePosition="right"
                 imageSize="1/3"
             >
@@ -65,7 +69,7 @@ const Blockline64 = () => {
                 </Text>
             </ImageText>
             <ImageText
-                image="../src/assets/images/blockline64/leaderboard_feature.png"
+                image={leaderboardFeature}
                 imagePosition="left"
                 imageSize="1/4"
             >
@@ -105,7 +109,7 @@ const Blockline64 = () => {
                 </Text>
             </ImageText >
             <ImageText
-                image="../src/assets/images/blockline64/skin_feature.png"
+                image={skinFeature}
                 imagePosition="right"
                 imageSize="1/4"
             >
@@ -137,7 +141,7 @@ const Blockline64 = () => {
                 </Text>
             </ImageText>
             <ImageText
-                image="../src/assets/images/blockline64/economy_feature.png"
+                image={economyFeature}
                 imagePosition="left"
                 imageSize="1/4"
             >
@@ -177,13 +181,13 @@ const Blockline64 = () => {
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12 pb-8">
                 <a
-                    href="/blockline64/privacy-policy.html"
+                    href={`${import.meta.env.BASE_URL}blockline64/privacy-policy.html`}
                     className="px-6 py-2 rounded-2xl bg-gray-800 text-white hover:bg-gray-700 transition"
                 >
                     Privacy Policy
                 </a>
                 <a
-                    href="/blockline64/terms-of-service.html"
+                    href={`${import.meta.env.BASE_URL}blockline64/terms-of-service.html`}
                     className="px-6 py-2 rounded-2xl bg-gray-800 text-white hover:bg-gray-700 transition"
                 >
                     Terms of Service
