@@ -1,12 +1,12 @@
-name: Deploy React App to GitHub Pages
+name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
     branches:
-      - main   # Only run when pushing/merging into main
+      - main
 
 permissions:
-  contents: write   # Needed to push to gh-pages branch
+  contents: write
 
 jobs:
   deploy:
@@ -27,8 +27,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_PAGES_REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
