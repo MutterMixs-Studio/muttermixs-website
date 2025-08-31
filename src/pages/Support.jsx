@@ -11,8 +11,7 @@ export default function Support() {
             </TextHeader>
 
             <Text className="py-4">
-                If you need support or have any questions, feel free to reach out! You can contact me via email at
-                <span className="font-semibold"> support@muttermixs.com</span>. I’m here to help!
+                Work in progress.
             </Text>
 
 
