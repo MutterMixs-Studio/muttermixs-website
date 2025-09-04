@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/muttermixs-website/',
+  base: '/',
   test: {
     globals: true,
     environment: 'jsdom',
