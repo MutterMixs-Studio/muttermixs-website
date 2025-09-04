@@ -1,5 +1,6 @@
 {
   "name": "muttermixs",
+  "homepage": "https://muttermixs.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
